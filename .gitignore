@@ -1,0 +1,6 @@
+
+/.idea/*
+/java_jvm.iml
+src/main/resources/
+target/
+/.idea/libraries/
