@@ -28,7 +28,7 @@ class MainFrame extends JFrame {
         JTextArea jTextArea = new JTextArea();
         jTextArea.setLineWrap(true);
         jTextArea.setPreferredSize(new Dimension(400, 300));
-        jPanel.add(jTextArea, BorderLayout.CENTER);
+        jPanel.add(jTextArea);
         JButton startButton = new JButton("start");
         startButton.addActionListener(new ActionListener() {
             @Override
