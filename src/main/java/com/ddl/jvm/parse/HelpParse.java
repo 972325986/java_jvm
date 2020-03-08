@@ -1,6 +1,6 @@
 package com.ddl.jvm.parse;
 
-import com.ddl.jvm.common.Constant;
+import com.beust.jcommander.JCommander;
 
 import java.util.logging.Logger;
 
@@ -24,6 +24,6 @@ class HelpParse extends AbstractParser {
 
     @Override
     void excuse(Args args) {
-        log.info(Constant.HELP);
+        JCommander.newBuilder().addObject(args).build().usage();
     }
 }

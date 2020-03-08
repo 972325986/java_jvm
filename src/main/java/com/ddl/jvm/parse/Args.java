@@ -58,7 +58,6 @@ public class Args {
         JCommander cmd = JCommander.newBuilder()
                 .addObject(args)
                 .build();
-
         try {
             cmd.parse(tmp.toArray(new String[0]));
             args.ok = true;
