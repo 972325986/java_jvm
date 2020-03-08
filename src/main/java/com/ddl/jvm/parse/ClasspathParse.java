@@ -1,8 +1,7 @@
 package com.ddl.jvm.parse;
 
+import com.beust.jcommander.JCommander;
 import org.apache.commons.lang3.StringUtils;
-
-import java.util.logging.Logger;
 
 /**
  * @description 类路径解析
@@ -10,7 +9,6 @@ import java.util.logging.Logger;
  * @create: 2020-03-07 19:37
  **/
 class ClasspathParse extends AbstractParser {
-    private Logger log = Logger.getLogger(this.getClass().getName());
 
     @Override
     void parse(Args args) {
@@ -24,6 +22,6 @@ class ClasspathParse extends AbstractParser {
 
     @Override
     void excuse(Args args) {
-        log.info("classpath:" + args.classpath + " class:" + args.getMainClass() + " args:" + args.getAppArgs());
+        JCommander.getConsole().println("classpath:" + args.classpath + " class:" + args.getMainClass() + " args:" + args.getAppArgs());
     }
 }

@@ -1,5 +1,6 @@
 package com.ddl.jvm.parse;
 
+import com.beust.jcommander.JCommander;
 import com.ddl.jvm.common.Constant;
 
 import java.util.logging.Logger;
@@ -10,7 +11,6 @@ import java.util.logging.Logger;
  * @create: 2020-03-07 19:33
  **/
 class VersionParse extends AbstractParser {
-    private Logger log = Logger.getLogger(this.getClass().getName());
 
     @Override
     void parse(Args args) {
@@ -24,6 +24,6 @@ class VersionParse extends AbstractParser {
 
     @Override
     void excuse(Args args) {
-        log.info(Constant.VERSION);
+        JCommander.getConsole().println(Constant.VERSION);
     }
 }

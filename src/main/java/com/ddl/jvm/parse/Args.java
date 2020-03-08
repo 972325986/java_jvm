@@ -64,7 +64,9 @@ public class Args {
         } catch (ParameterException ignored) {
             System.out.println("解析失败");
         }
-
+        if (args.helpFlag||!args.ok){
+            cmd.usage();
+        }
         return args;
     }
 }
